@@ -1,0 +1,28 @@
+.logo{height: 150px; display: block; 
+	margin-right: auto; margin-left: auto;}
+.topnav{display: table;width: 100%;
+	border-collapse: collapse;border:none;
+text-align: center;}
+.topnav ul{display: table-row; }
+.topnav li{display: table-cell;margin: 0; font-size: 1.5rem; 
+	text-transform: 
+uppercase; letter-spacing: 5px; font-family: fantasy;}
+.topnav a{text-decoration: none; color: black}
+.topnav a:hover{background-color: orange}
+.column{float:left;width:33.33%; text-align: center; 
+	border-radius:25px; height: 400px
+}
+.imgs{height: 150px}
+.foot{position: absolute;}
+footer{text-align: center;}
+p{margin-left: 100px; }
+body{background-color: #f0effc}
+h1{font-family: fantasy; text-align: center;}
+.registration{font-size: 20px;}
+input{border:none;}
+#loginForm,#loginForm{text-align: right;}
+form{text-align: center;}
+li{list-style: none;}
+a{text-decoration: none}
+
+
