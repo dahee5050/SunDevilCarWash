@@ -15,7 +15,7 @@ uppercase; letter-spacing: 5px; font-family: fantasy;}
 .imgs{height: 150px}
 .foot{position: absolute;}
 footer{text-align: center;}
-p{margin-left: 100px; }
+/*p{margin-left: 100px; }*/
 body{background-color: #f0effc}
 h1{font-family: fantasy; text-align: center;}
 .registration{font-size: 20px;}
@@ -24,5 +24,7 @@ input{border:none;}
 form{text-align: center;}
 li{list-style: none;}
 a{text-decoration: none}
+ul { text-align: auto; }
+p { text-align: auto; }
 
 
