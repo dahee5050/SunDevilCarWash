@@ -12,9 +12,13 @@ uppercase; letter-spacing: 5px; font-family: fantasy;}
 .column{float:left;width:33.33%; text-align: center; 
 	border-radius:25px; height: 400px
 }
+.prod_column{float:left;width:20%; text-align:left; 
+	border-radius:25px; height:300px
+}
+.new_row{clear:both;}
 .imgs{height: 150px}
 .foot{position: absolute;}
-footer{text-align: center;}
+footer{text-align: center; clear:both;}
 /*p{margin-left: 100px; }*/
 body{background-color: #fffdaf}
 h1{font-family: fantasy; text-align: center;}
@@ -26,5 +30,3 @@ li{list-style: none;}
 a{text-decoration: none}
 ul { text-align: auto; }
 p { text-align: auto; }
-
-
