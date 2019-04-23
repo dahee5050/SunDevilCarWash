@@ -33,7 +33,7 @@
               console.log("data parameter: " + data);
 
               var dataAsString = JSON.stringify(data.Result[0].Cost*1.08);
-              document.getElementById("output").innerHTML = dataAsString;
+              document.getElementById("output").innerHTML = "Total price for your picked item: " + dataAsString;
              
             }
         );
