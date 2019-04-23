@@ -1,8 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SunDevilCarWash Services</title>
+  <title>Sun Devil Car Wash-Services/Products</title>
+
   <link rel="stylesheet" type="text/css" href="pagestyling.css">
+  <script src="https://mysqljs.com/mysql.js" type="text/javascript"></script>
+  <script>
+
+      function processForm() {
+ 
+        let sqlStmt;
+
+        var searchValue = document.getElementById("products").value;
+        console.log(searchValue);
+
+        sqlStmt = "SELECT Cost FROM Product WHERE name= '" + searchValue + "'";;
+        // WHERE name= '" + searchValue + "'";
+        
+
+        console.log(sqlStmt);
+
+        MySql.Execute(
+            "sql.wpc-is.online", 
+            "teamb05",
+            "teamb053165",
+            "db_teamb05",
+
+            sqlStmt,                // SQL statement          
+
+            function (data) {       // callback function
+
+              document.getElementById("output").innerHTML = data;
+              console.log("data parameter: " + data);
+              //console.log("data parameter: ", data);
+
+              var dataAsString = JSON.stringify(data.Result[0].Cost*1.08);
+              document.getElementById("output").innerHTML = dataAsString;
+             
+            }
+        );
+
+      }
+
+    </script>
 </head>
 <body>
   <meta>
@@ -13,7 +53,7 @@
   <ul>
     <li></li>
     <li><a href = "SunDevilCarWashHome.html">Home</a></li>
-    <li><a href = "Services.html">Products and Services</a></li>
+    <li><a href = "Services.html">Services</a></li>
     <li><a href = "ContactUs.html">Contact Us</a></li>
   </ul> 
 </div>
@@ -21,7 +61,7 @@
 <hr>
 
 <p>
-<h1>Products and Services</h1>
+<h1>Services</h1>
 
   <h2>Products</h2>
   
@@ -142,7 +182,7 @@
 
 
 <form>
-  <select name="products" align="auto">
+  <select id="products" align="auto">
     <option value="Microfiber Cloths">Microfiber Cloths</option>
     <option value="Armor All Surface Wipes">Armor All Surface Wipes</option>
     <option value="Headlight Lens Restorer">Headlight Lens Restorer</option>
@@ -162,8 +202,11 @@
     <option value="Vacuum">Vacuum</option>
   </select>
   <br><br>
-  <input type="submit">
+  <input type="button" value="Submit" onclick="processForm()">
+  <!-- <button onclick="processForm()">Submit</button> -->
 </form>
+
+<p id ="output">Total price for your picked item.</p>
 
 
 <footer>
