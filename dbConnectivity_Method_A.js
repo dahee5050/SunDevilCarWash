@@ -32,7 +32,7 @@ connObj.query(sqlStmt,
 
 			// get the "customer id" column value from all records
 			for (i=0; i<dataSet.length; i++) {
-				console.log("\nCustomer ID " + i + ": " + dataSet[i].cust_id);
+				console.log("\nID " + i + ": " + dataSet[i].ID);
 			}
 		}
 	}
