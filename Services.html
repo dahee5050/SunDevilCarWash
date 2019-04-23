@@ -15,7 +15,6 @@
         console.log(searchValue);
 
         sqlStmt = "SELECT Cost FROM Product WHERE name= '" + searchValue + "'";;
-        // WHERE name= '" + searchValue + "'";
         
 
         console.log(sqlStmt);
@@ -26,13 +25,12 @@
             "teamb053165",
             "db_teamb05",
 
-            sqlStmt,                // SQL statement          
+            sqlStmt,                     
 
-            function (data) {       // callback function
+            function (data) {
 
               document.getElementById("output").innerHTML = data;
               console.log("data parameter: " + data);
-              //console.log("data parameter: ", data);
 
               var dataAsString = JSON.stringify(data.Result[0].Cost*1.08);
               document.getElementById("output").innerHTML = dataAsString;
@@ -203,10 +201,10 @@
   </select>
   <br><br>
   <input type="button" value="Submit" onclick="processForm()">
-  <!-- <button onclick="processForm()">Submit</button> -->
+
 </form>
 
-<p id ="output">Total price for your picked item.</p>
+<p id ="output">Total price for your picked item: </p>
 
 
 <footer>
